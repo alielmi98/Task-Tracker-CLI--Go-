@@ -21,22 +21,20 @@ This Go implementation adheres to the project's requirements, using only native 
 1. Clone the repository:
    ```bash
    git clone <repository_url>
-Navigate to the cmd directory:
-bash
 
-Copy
-cd <project_directory>/cmd/task-tracker
-Build the application:
-bash
+2. Navigate to the cmd directory:
+    ```bash
+    cd <project_directory>/cmd/task-tracker
 
-Copy
-go build
-Run the application:
-bash
+3. Build the application:
+    ```bash
+    go build
 
-Copy
-./task-tracker <command> <arguments>
-Usage
+4. Run the application:
+    ```bash
+    ./task-tracker <command> <arguments>
+
+## Usage
 The application is run from the command line. The following commands are supported:
 
 add <description>: Adds a new task with the given description.
@@ -46,19 +44,17 @@ mark-in-progress <id>: Marks the task with the given ID as "in-progress".
 mark-done <id>: Marks the task with the given ID as "done".
 list: Lists all tasks.
 list <status>: Lists tasks with the specified status ("todo", "in-progress", or "done").
-Example Usage
-bash
 
-Copy
-./task-tracker add "Buy groceries"
-./task-tracker update 1 "Buy groceries and milk"
-./task-tracker list done
-./task-tracker delete 1
+## Example Usage
+bash
+    ./task-tracker add "Buy groceries"
+    ./task-tracker update 1 "Buy groceries and milk"
+    ./task-tracker list done
+    ./task-tracker delete 1
 The application will store tasks in a file named tasks.json in the <project_directory>/internal/data directory.
 
 Project Structure
-
-Copy
+bash
 task-tracker/
 ├── cmd/
 │   └── task-tracker/
@@ -92,13 +88,13 @@ This project utilizes several design patterns and Go programming best practices 
 
 **8. Code Cleanliness:** The code is well-formatted and includes clear comments, improving readability and understanding.
 
-Error Handling
+## Error Handling
 The application includes basic error handling to manage file I/O and data parsing issues. More robust error handling could be added for production use.
 
-Contributing
+## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
 
-License
+## License
 MIT License
 
 Roadmap.sh Project Page
