@@ -37,24 +37,25 @@ This Go implementation adheres to the project's requirements, using only native 
 ## Usage
 The application is run from the command line. The following commands are supported:
 
-add <description>: Adds a new task with the given description.
-update <id> <new_description>: Updates the description of the task with the given ID.
-delete <id>: Deletes the task with the given ID.
-mark-in-progress <id>: Marks the task with the given ID as "in-progress".
-mark-done <id>: Marks the task with the given ID as "done".
-list: Lists all tasks.
-list <status>: Lists tasks with the specified status ("todo", "in-progress", or "done").
+* add <description>: Adds a new task with the given description.
+* update <id> <new_description>: Updates the description of the task with the given ID.
+* delete <id>: Deletes the task with the given ID.
+* mark-in-progress <id>: Marks the task with the given ID as "in-progress".
+* mark-done <id>: Marks the task with the given ID as "done".
+* list: Lists all tasks.
+* list <status>: Lists tasks with the specified status ("todo", "in-progress", or "done").
 
 ## Example Usage
-bash
+```bash
     ./task-tracker add "Buy groceries"
     ./task-tracker update 1 "Buy groceries and milk"
     ./task-tracker list done
     ./task-tracker delete 1
+```
 The application will store tasks in a file named tasks.json in the <project_directory>/internal/data directory.
 
-Project Structure
-bash
+## Project Structure
+```bash
 task-tracker/
 ├── cmd/
 │   └── task-tracker/
@@ -67,7 +68,7 @@ task-tracker/
 │   └── pkg/
 │       └── ...
 └── go.mod
-
+```
 ## Design Patterns and Best Practices
 
 This project utilizes several design patterns and Go programming best practices to structure and organize the code:
@@ -97,5 +98,5 @@ Contributions are welcome! Please open an issue or submit a pull request.
 ## License
 MIT License
 
-Roadmap.sh Project Page
+## Roadmap.sh Project Page
 This project is a solution for the Task Tracker project idea found on roadmap.sh. This README file provides instructions for running the Go implementation of this project.
